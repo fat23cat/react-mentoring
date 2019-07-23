@@ -25,12 +25,12 @@ module.exports = (env, argv) => {
                 },
                 {
                     test: /\.css$/,
-                    use: [{
-                        loader: MiniCssExtractPlugin.loader,
+                    use: ['style-loader', {
+                        loader: 'css-loader',
                         options: {
-                            hmr: devMode
+                            modules: true,
                         }
-                    }, 'css-loader']
+                    }]
                 }
             ]
         },
