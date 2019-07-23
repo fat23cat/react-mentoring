@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './styles.css';
 
 export default function MovieCard(props) {
-    return <div>
+    return <div className={styles.card} onClick={props.onClickHandler}>
         <img src={props.movie.poster_path}></img>
         <div>
             <span>{props.movie.title}</span>
