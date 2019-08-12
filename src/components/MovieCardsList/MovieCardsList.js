@@ -1,5 +1,6 @@
 import React from 'react';
 import MovieCard from '../MovieCard/MovieCard';
+import styles from './styles.css';
 
 const movies = [
     {
@@ -189,13 +190,15 @@ const movies = [
 ];
 
 export default function MovieCardsList() {
-    const handleMovieCardClick = () => {
-        alert('click!');
+    const handleMovieCardClick = (id) => {
+        alert(`${id} clicked`);
     }
 
-    return <>
-        {movies.map(movie =>
-            <MovieCard movie={movie} onClickHandler={handleMovieCardClick} key={movie.id} />)
+    return <div className={styles.cards_container}>
+        {movies.length ?
+            (movies.map(movie =>
+                <MovieCard movie={movie} onClickHandler={handleMovieCardClick} key={movie.id} />)) :
+            (<p>No films found</p>)
         }
-    </>;
+    </div>;
 }

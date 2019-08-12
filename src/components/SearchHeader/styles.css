@@ -1,0 +1,16 @@
+.main_panel {
+    background-image: url(../../images/films.jpg);
+    background-size: cover;
+    height: 300px;
+}
+
+.panel_title {
+    color: palevioletred;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.additional_panel {
+    height: 70px;
+    background-color: gainsboro;
+}

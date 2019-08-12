@@ -1,3 +1,11 @@
 .card {
     cursor: pointer;
+    max-width: 250px;
+    height: auto;
+    margin: 0 15px 0 0;
+}
+
+.card_image {
+    max-width: 250px;
+    height: auto;
 }
